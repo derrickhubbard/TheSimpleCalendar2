@@ -9,9 +9,11 @@ namespace TheSimpleCalendar2018.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ViewResult Index()
         {
-            return "TheSimpleCalendar2018";
+            int hour = DateTime.Now.Hour;
+            ViewBag.Input = hour < 12 ? "What is your event time Morning" : "Afternoon";
+            return View();
         }
     }
 }
