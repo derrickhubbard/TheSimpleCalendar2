@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TheSimpleCalendar2018.Models;
 
 namespace TheSimpleCalendar2018.Controllers
 {
@@ -15,9 +16,16 @@ namespace TheSimpleCalendar2018.Controllers
             ViewBag.Input = hour < 12 ? "What is your event time " : "Afternoon";
             return View();
         }
+        [HttpGet]
         public ViewResult ProfileForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult ProfileForm(ProflieResponse proflieResponse)
+        {
+            return View("Thanks you for your entry", proflieResponse);
         }
     }
 }
