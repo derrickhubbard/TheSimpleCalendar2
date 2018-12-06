@@ -1,0 +1,36 @@
+﻿@model TheSimpleCalendar2018.Models.ProflieResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProfileForm</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <p>Your name: @Html.TextBoxFor(x => x.Name) </p>
+        <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+        <P>Your home: @Html.TextBoxFor(x => x.Home)</P>
+        <p>Your work: @Html.TextBoxFor(x => x.Work)</p>
+        <p>Your school: @Html.TextBoxFor(x => x.School) </p>
+        <p>Your location: @Html.TextBoxFor(x => x.Location)</p>
+        <p>
+            Will you attend?
+            @Html.DropDownListFor(x => x.WillAttend, new[] {
+            new SelectListItem() {Text = "Yes, I'll be there",
+            Value = bool.TrueString},
+            new SelectListItem() {Text = "No, I can't come",
+                Value = bool.FalseString}
+            }, "Choose an option")
+        </p>
+        <input type="submit" value="Submit RSVP" />
+        }
+</body>
+</html>

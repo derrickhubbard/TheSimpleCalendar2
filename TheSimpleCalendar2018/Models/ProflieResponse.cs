@@ -13,7 +13,7 @@ namespace TheSimpleCalendar2018.Models
         public string Home { get; set; }
         public string Work  { get; set; }
         public string School { get; set; }
-        public string Place { get; set; }
+        public string Location { get; set; }
         public bool? WillAttend { get; set; }
     }
 }
