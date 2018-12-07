@@ -1,0 +1,27 @@
+﻿@model TheSimpleCalendar2018.Models.ProflieResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CalendarReply</title>
+</head>
+<body>
+    <div>
+        <h1>Profile Reply, @Model.Profile!</h1>
+        @if (Model.WillAttend == true)
+        {
+            @:You have been assigned a new event.
+        }
+        else
+        {
+            @:A new profile will be assigned this task.
+        }
+    </div>
+</body>
+</html>
