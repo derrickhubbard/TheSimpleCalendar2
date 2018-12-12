@@ -13,7 +13,7 @@ namespace TheSimpleCalendar2018.Controllers
         public ViewResult Index()
         {
             int hour = DateTime.Now.Hour;
-            ViewBag.Input = hour < 12 ? "What is your event time " : "Afternoon";
+            ViewBag.Input = hour < 12 ? "Welcome to " : "Afternoon";
             return View();
         }
         [HttpGet]

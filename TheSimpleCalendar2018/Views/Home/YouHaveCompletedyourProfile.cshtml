@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>YouHaveCompletedyourProfile</title>
+</head>
+<body>
+    <div> 
+        <h1>Thank you, @Model.Name!</h1>
+        @if (Model.WillAttend ==true)
+        {
+            @:You have completed your profile. Now you have to make sure all your family profiles are updated.
+        }
+        else
+        {
+            @:Sorry your profile is not complete.
+        }
+    </div>
+</body>
+</html>
